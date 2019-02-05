@@ -1,0 +1,19 @@
+Availablity:
+It can be achieved by replicating data across different machine. It means data will be available on multiple machine
+Every request resceives a (non-error) response - without guarantee that it contains the most recent write. OR
+A each non failover node must execute queries
+Availablity means the ability to access the cluster even if a node in the cluster goes down.
+
+
+Consistency:
+It is achieved by updating several nodes
+Every read received the most recent write or an error
+Consistency meaNS that the data is same accross the cluster, so you can read or write to/from any node and get the same data
+
+
+Partition Tolerance:
+
+Even if the connection among nodes are down then other 2 consistency and availablilty promises must be kept 
+The system continues to operate despite an arbitarary number of meassages being dropped(or delayed) by the network between nodes.
+
+Partition Tolerance means that the cluster continues to function even if there is a partition (communication break) between two nodes(both nodes are up, but can't communicate)
