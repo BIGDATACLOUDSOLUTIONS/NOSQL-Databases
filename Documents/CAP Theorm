@@ -1,4 +1,6 @@
 Availablity:
+
+This condition states that every request gets a response on success/failure. 
 It can be achieved by replicating data across different machine. It means data will be available on multiple machine. 
 Replication of data to all other node may or may not happen immediately if any changes are made on any node.
 Every request resceives a (non-error) response - without guarantee that it contains the most recent write. OR
