@@ -37,7 +37,17 @@ CP - data is consistent between all nodes, and maintains partition tolerance (pr
 AP - nodes remain online even if they can't communicate with each other and will resync data once the partition is resolved, but you aren't guaranteed that all nodes will have the same data (either during or after the partition)
 You should note that CA systems don't practically exist (even if some systems claim to be so).
 
+What does Eventual consistency mean: 
+Eventual consistency is a characteristic of distributed computing systems such that the value for a specific data item will, 
+given enough time without updates, be consistent across all nodes. 
+Accordingly, the value across all nodes will be consistent with the last update that was made -- eventually.
+Before enough time has elapsed without updates, however, the value may be inconsistent across multiple copies of the data. 
+Eventual consistency is only acceptable for fault-tolerant applications.
+In distributed computing environments, the CAP theorem postulates that it is impossible to simultaneously guarantee consistency,
+availability and partition tolerance (CAP) and that administrators have to select the two out of three that are most important to them.
+Eventual consistency is also known as optimistic replication. 
 
 Reference:
 https://towardsdatascience.com/cap-theorem-and-distributed-database-management-systems-5c2be977950e
 https://www.w3resource.com/mongodb/nosql.php
+https://whatis.techtarget.com/definition/eventual-consistency
