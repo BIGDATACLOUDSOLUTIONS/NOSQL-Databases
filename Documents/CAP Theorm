@@ -1,19 +1,22 @@
 Availablity:
-It can be achieved by replicating data across different machine. It means data will be available on multiple machine
+It can be achieved by replicating data across different machine. It means data will be available on multiple machine. 
+Replication of data to all other node may or may not happen immediately if any changes are made on any node.
 Every request resceives a (non-error) response - without guarantee that it contains the most recent write. OR
 A each non failover node must execute queries
-Availablity means the ability to access the cluster even if a node in the cluster goes down.
+Availablity means the ability to access the cluster even if a node in the cluster goes down. The cluster as a whole should respond always.
 
 
 Consistency:
-It is achieved by updating several nodes
-Every read received the most recent write or an error
-Consistency meaNS that the data is same accross the cluster, so you can read or write to/from any node and get the same data
+It is achieved by updating several nodes. 
+As soon as data is written/updated on any node, while reading the same data from other node should always give latest update of data.
+Every read received the most recent write or an error.
+Consistency means that the data is same accross the cluster, so you can read or write to/from any node and get the same data
 
 
 Partition Tolerance:
 
 Even if the connection among nodes are down then other 2 consistency and availablilty promises must be kept 
-The system continues to operate despite an arbitarary number of meassages being dropped(or delayed) by the network between nodes.
+The system continues to operate despite an arbitarary number of messages being dropped(or delayed) by the network between nodes.
 
-Partition Tolerance means that the cluster continues to function even if there is a partition (communication break) between two nodes(both nodes are up, but can't communicate)
+Partition Tolerance means that the cluster continues to function even if there is a partition (communication break) 
+between two nodes(both nodes are up, but can't communicate). All individual nodes are running and up and serve the cluster.
